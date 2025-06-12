@@ -96,6 +96,12 @@ const ChatComponent: React.FC = () => {
                <Input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
+                    onKeyUp={(e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            handleSendChatMessage();
+                        }
+                    }}
                     placeholder="type your query here" 
                 />
                <Button onClick={handleSendChatMessage} disabled={!message.trim()}>Send</Button>
