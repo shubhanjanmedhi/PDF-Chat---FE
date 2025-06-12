@@ -34,7 +34,7 @@ const ChatComponent: React.FC = () => {
         console.log(isLoading);
         setMessages(prev => [...prev, { role: 'loading' }]);
         try {
-            const res = await fetch(`http://localhost:8000/chat?message=${message}`);
+            const res = await fetch(`https://pdf-chat-server.onrender.com/chat?message=${message}`);
             const data = await res.json()
             setMessages(prev => [...prev.filter(msg => msg.role !== 'loading'), { 
                 role: 'assistant', 

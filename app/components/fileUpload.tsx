@@ -19,7 +19,7 @@ const FileUpload: React.FC = () => {
 
                     setIsUploading(true);
                     try {
-                        await fetch('http://localhost:8000/upload/pdf', {
+                        await fetch('https://pdf-chat-server.onrender.com/upload/pdf', {
                             method: 'POST',
                             body: formData
                         });
