@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ClerkProvider, SignIn, SignUp, SignedIn, SignedOut } from '@clerk/nextjs'
+// import { ClerkProvider, SignIn, SignUp, SignedIn, SignedOut } from '@clerk/nextjs'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,22 +24,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
+    // <ClerkProvider>
+    //   <html lang="en">
+    //     <body
+    //       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    //     >
+    //       <section className="min-h-screen w-screen flex items-center justify-center">
+    //         <SignedOut>
+    //           <SignIn />
+    //         </SignedOut>
+    //       </section>
+    //       <SignedIn>
+    //         {children}
+    //       </SignedIn>
+    //     </body>
+    //   </html>
+    // </ClerkProvider>
+    <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          {/* <section className="min-h-screen w-screen flex items-center justify-center">
-            <SignedOut>
-              <SignIn />
-            </SignedOut>
-          </section>
-          <SignedIn>
-            {children}
-          </SignedIn> */}
             {children}
         </body>
       </html>
-    </ClerkProvider>
   );
 }

@@ -8,7 +8,7 @@ const FileUpload: React.FC = () => {
         const el = document.createElement('input');
         el.setAttribute('type', 'file');
         el.setAttribute('accept', 'application/pdf');
-        el.addEventListener('change', async (e) => {
+        el.addEventListener('change', async () => {
             if(el.files && el.files.length > 0) {
                 const file = el.files.item(0);
                 if (file) {

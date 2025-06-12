@@ -25,12 +25,13 @@ interface IMessage {
 const ChatComponent: React.FC = () => {
     const [message, setMessage] = React.useState<string>('');
     const [messages, setMessages] = React.useState<IMessage[]>([]);
-      const [isLoading, setIsLoading] = React.useState<boolean>(false);
+    const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
     const handleSendChatMessage = async () => {
         if (!message.trim()) return;
         setMessages(prev => [...prev, { role: 'user', content: message }]);
         setIsLoading(true);
+        console.log(isLoading);
         setMessages(prev => [...prev, { role: 'loading' }]);
         try {
             const res = await fetch(`http://localhost:8000/chat?message=${message}`);
