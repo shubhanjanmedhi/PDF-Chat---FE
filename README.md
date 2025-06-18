@@ -4,6 +4,7 @@ Chat based RAG Application where you can upload one or multiple PDF files and ch
 Pre-requisite: Node.js must be installed in your system
 
 **Optional:** If you want to use Authentication
+
     Step 0.1: Create a `.env` file to the project root
 
     Step 0.2: Add
