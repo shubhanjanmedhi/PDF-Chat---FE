@@ -19,7 +19,7 @@ const FileUpload: React.FC = () => {
 
                     setIsUploading(true);
                     try {
-                        await fetch('https://5509-2401-4900-1cba-6ede-2dac-512d-597f-722e.ngrok-free.app/upload/pdf', {
+                        await fetch('http://localhost:8000/upload/pdf', {
                             method: 'POST',
                             body: formData
                         });

@@ -34,11 +34,7 @@ const ChatComponent: React.FC = () => {
         console.log(isLoading);
         setMessages(prev => [...prev, { role: 'loading' }]);
         try {
-            const res = await fetch(`https://5509-2401-4900-1cba-6ede-2dac-512d-597f-722e.ngrok-free.app/chat?message=${message}`,{
-                headers: {
-                    "ngrok-skip-browser-warning": "true"
-                }
-            });
+            const res = await fetch(`http://localhost:8000/chat?message=${message}`);
             const data = await res.json()
             setMessages(prev => [...prev.filter(msg => msg.role !== 'loading'), { 
                 role: 'assistant', 
