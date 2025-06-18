@@ -7,10 +7,8 @@ Pre-requisite: Node.js must be installed in your system
     Step 0.1: Create a `.env` file to the project root
 
     Step 0.2: Add
-    ```
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your clerk public key>
     CLERK_SECRET_KEY=<your clerk secret key>
-    ```
 
     Step 0.3: Update `layout.tsx` and replace the current `return()` with the commented content
 
