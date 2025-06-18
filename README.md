@@ -1,7 +1,7 @@
 # PDF Chat -- Client (Frontend)
 Chat based RAG Application where you can upload one or multiple PDF files and chat with it
 
-Pre-requisite: Node.js must be installed in your system
+**Pre-requisite:** Node.js must be installed in your system
 
 **Optional:** If you want to use Authentication
 
